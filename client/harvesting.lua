@@ -16,11 +16,8 @@ for drug, data in pairs(Config.Zones.Harvest) do
                 drug = drug,
                 action = function()
                     TriggerServerEvent('rwhdrugscript:harvest', drug)
-                end,
-                canInteract = function()
-                    return not IsPedInAnyVehicle(PlayerPedId(), false)
-                end,
-            },
+                end
+            }
         },
         distance = 2.5,
     })
